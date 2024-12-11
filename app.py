@@ -4,7 +4,6 @@ import os
 import requests
 from werkzeug.utils import secure_filename
 from uuid import uuid4
-from remover import remove_bg
 from PIL import Image
 from pathlib import Path
 from transformers import AutoModelForImageSegmentation
