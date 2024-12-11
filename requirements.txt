@@ -1,0 +1,13 @@
+transformers
+torch
+torchvision
+scikit-image
+Pillow
+numpy
+matplotlib
+flask
+flask-cors
+werkzeug
+opencv-python
+gunicorn
+cloudinary
