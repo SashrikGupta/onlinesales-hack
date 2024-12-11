@@ -296,16 +296,16 @@ def remove_bg(image_path, x_min, y_min, width, height):
 
 
 
-app = Flask(__name__)
+flask_app = Flask(__name__)
 
 # Enable CORS for all routes
-CORS(app)
+CORS(flask_app)
 
-@app.route('/')
+@flask_app.route('/')
 def hello_world():
     return "Hello, World!"
 
-@app.route('/remove-background', methods=['POST'])
+@flask_app.route('/remove-background', methods=['POST'])
 def remove_background():
     try:
         # Parse JSON input
@@ -366,4 +366,5 @@ def remove_background():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    flask_app.run(host='0.0.0.0', port=port, debug=True)
+
